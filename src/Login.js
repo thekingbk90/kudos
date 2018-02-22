@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import store from './configureStore';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-
 import ProductList from './views/ProductList';
 import Products from './views/Products';
 import Categories from './views/Categories';
@@ -23,7 +21,7 @@ if (!window.Promise) {
 class Login extends Component {
     render() {
         function handleClick(e) {
-            e.preventDefault();
+            // e.preventDefault();
             var username = document.getElementById('username').value;
             var password = document.getElementById('pwd').value;
             console.log(username);
@@ -36,10 +34,10 @@ class Login extends Component {
         }
 
         function fakeData() {
-            config.API_SESSION = 'crchuckvjeij9jfci0jotj0it2';
+            config.API_SESSION = 'iktu2lfsjrqh27e628uri88ta6';
             config.API_CATEGORIES_URL = 'http://35.187.246.124:8081/rest/default/V1/webpos/categories?searchCriteria[filter_groups][0][filters][0][field]=first_category&searchCriteria[filter_groups][0][filters][0][value]=1&searchCriteria[filter_groups][0][filters][0][condition_type]=eq&searchCriteria[sortOrders][0][field]=position&searchCriteria[sortOrders][0][direction]=ASC&searchCriteria[pageSize]=100&searchCriteria[currentPage]=1';
-            config.API_PRODUCTS_URL = 'http://35.187.246.124:8081/rest/default/V1/webpos/products?show_out_stock=1&searchCriteria[sortOrders][0][field]=name&searchCriteria[sortOrders][0][direction]=ASC&searchCriteria[pageSize]=15&searchCriteria[currentPage]=2';
-            config.API_PRODUCT_URL = 'http://35.187.246.124:8081/rest/default/V1/webpos/products?show_out_stock=1&searchCriteria[sortOrders][0][field]=name&searchCriteria[sortOrders][0][direction]=ASC&searchCriteria[pageSize]=15&searchCriteria[currentPage]=2';
+            config.API_PRODUCTS_URL = 'http://35.187.246.124:8081/rest/default/V1/webpos/products?show_out_stock=1&searchCriteria[sortOrders][0][field]=name&searchCriteria[sortOrders][0][direction]=ASC&searchCriteria[pageSize]=8&searchCriteria[currentPage]=1';
+            config.API_PRODUCT_URL = 'http://35.187.246.124:8081/rest/default/V1/webpos/products?show_out_stock=1&searchCriteria[sortOrders][0][field]=name&searchCriteria[sortOrders][0][direction]=ASC&searchCriteria[pageSize]=8&searchCriteria[currentPage]=1';
             openApp(config.API_SESSION)
         }
 
@@ -121,5 +119,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-registerServiceWorker();

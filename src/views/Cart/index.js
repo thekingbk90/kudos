@@ -16,7 +16,7 @@ class Cart extends Component {
     return _.isEmpty(this.props.cart) ? (
       <Segment textAlign="center">Your Cart is Empty</Segment>
     ) : (
-      <div>
+      <div className="ui segment-content">
         <Header textAlign="center">Shopping Cart</Header>
         {this.props.cart.map(product => <CardProduct key={_.isNil(product.variationId) ? product.id : product.variationId} product={product} />)}
         <CardSummary total={this.getTotalPrice()} cart={this.props.cart} />

@@ -23,7 +23,7 @@ class Categories extends Component {
     }
 
     return (
-      <div>
+      <div className="ui segment-content">
         <Header textAlign="center">Categories</Header>
         <CategoriesList categories={this.props.categories} />
       </div>

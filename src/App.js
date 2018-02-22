@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="kingtan">
         <ReduxToastr timeOut={4000} newestOnTop preventDuplicates position="top-center" transitionIn="fadeIn" transitionOut="fadeOut" />
         <Sidebar.Pushable>
           <SideMenu isVisible={this.props.sideMenuVisible} closeMenu={this.props.closeMenu} />

@@ -18,7 +18,7 @@ class ProductsList extends Component {
             />
         ));
         return (
-            <div>
+            <div className="ui segment-content">
                 <Header textAlign="center">{this.props.title}</Header>
                 {list}
             </div>
