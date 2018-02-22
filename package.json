@@ -1,6 +1,7 @@
 {
   "name": "kudos",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "@types/react": "^16.0.35",
+    "eslint-plugin-react": "^7.6.1",
     "google-maps-react": "^1.0.19",
     "history": "^4.7.2",
     "indexeddb-tools-redux": "^2.0.0",
@@ -45,5 +47,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "rules": {
+    "eqeqeq": "off",
+    "curly": "warn",
+    "quotes": [
+      "warn",
+      "double"
+    ]
   }
 }
